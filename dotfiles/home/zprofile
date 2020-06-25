@@ -1,0 +1,9 @@
+# Executes commands at login pre-zshrc.
+
+# source zprezto zprofile
+source "${ZDOTDIR:-$HOME}/.zprezto/runcoms/zprofile"
+
+export EDITOR='vim'
+export VISUAL='vim'
+export PAGER='less'
+export BROWSER='firefox'

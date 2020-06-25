@@ -1,0 +1,6 @@
+configuration {
+	show-icons:         true;
+	modi: "windowcd,run,drun";
+	hide-scrollbar:     true;
+}
+@import "/usr/share/rofi/themes/Monokai.rasi"

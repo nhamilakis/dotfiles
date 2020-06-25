@@ -1,0 +1,4 @@
+# Executed commands at login post-zshrc.
+
+# source zprezto zlogin
+source "${ZDOTDIR:-$HOME}/.zprezto/runcoms/zlogin"

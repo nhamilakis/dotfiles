@@ -1,0 +1,37 @@
+# Define Environment Variables
+export ME="${USER}"
+export WORKSPACE="${HOME}/workspace"
+export APP_HOME="${HOME}/applications"
+export SNAP_HOME="/snap/bin/"
+export APP_HOME="/opt"
+
+# LOCAL BIN
+export LOCAL_BIN="$HOME/.local/bin"
+
+PATH="$PATH:$APP_HOME/bin:$HOME/bin:$LOCAL_BIN:$SNAP_HOME"
+
+
+# ::$GENYMOTION_VM:$LNAV:
+
+
+# Define custom aliases
+
+alias ls="ls --color=always"
+alias ll="ls -la --color=always"
+alias rr="reset"
+alias reload="source $HOME/.zshrc"
+
+alias sroot="sudo -u root"
+
+# GIT Commands
+alias status='git status'
+alias commit='git commit'
+alias add='git add'
+alias checkout='git checkout'
+alias branch='git branch'
+alias push='git push'
+alias pull='git pull'
+
+# Application Shortcuts
+alias qq="exit"
+alias QQ="shutdown -t now"

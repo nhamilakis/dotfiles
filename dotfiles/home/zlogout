@@ -1,0 +1,4 @@
+# Executes commands at logout.
+
+# source zprezto zlogout
+source "${ZDOTDIR:-$HOME}/.zprezto/runcoms/zlogout"

@@ -4,10 +4,10 @@ APPS=zsh miniconda
 all: setup $(APPS)
 
 setup: apt-utils
-	cd $< && ./install.sh >> /dev/null 2>&1
+	cd $< && ./install.sh
 
 $(APPS):
 	@echo "installing $@ ..."
-	cd $@ && ./install.sh >> /dev/null 2>&1
+	cd $@ && ./install.sh
 
 .PHONY: all setup $(APPS)

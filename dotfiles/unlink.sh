@@ -44,7 +44,7 @@ unlink_home () {
 
 # main
 unlink_config
-unlink_local_share
+# unlink_local_share
 unlink_local_bin
 unlink_local_etc
 unlink_home

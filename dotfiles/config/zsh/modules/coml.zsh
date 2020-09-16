@@ -1,10 +1,5 @@
-# Mount bootphon18 shortcuts
-alias mount_root="sudo mount /dev/sda2 /mnt/old_root"
-alias mount_home="sudo mount /dev/sda6 /mnt/old_home"
 
 export HABILIS="129.199.81.135"
-export DEV_API="https://coml.lscp.ens.fr/bigbaby/"
-export API="https://api.babycloudlab.com/"
 export OBERON='129.199.81.30'
 export TITANIA='129.199.81.32'
 

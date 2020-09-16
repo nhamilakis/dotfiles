@@ -3,6 +3,10 @@
 SCRIPT_NAME=$(readlink -f ${BASH_SOURCE[0]})
 DOTFILES="$(dirname "${SCRIPT_NAME}")"
 
+
+# GNU PATH
+PATH="/opt/local/libexec/gnubin:${PATH}"
+
 export_vars () {
   if [[  -f "$1" ]];  then
     set -a      # turn on automatic export

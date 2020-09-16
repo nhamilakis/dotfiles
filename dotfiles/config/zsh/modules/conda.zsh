@@ -1,4 +1,4 @@
-export ANACONDA_HOME="$HOME/miniconda"
+export ANACONDA_HOME="$HOME/miniconda3"
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!

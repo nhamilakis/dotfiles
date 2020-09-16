@@ -50,7 +50,7 @@ link_home () {
 
 # main
 link_config
-link_local_share
+# link_local_share
 link_local_bin
 link_local_etc
 link_home

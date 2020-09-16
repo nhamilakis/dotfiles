@@ -1,4 +1,4 @@
-MODULES=apt snap
+MODULES=
 
 $(MODULES):
 	cd modules/$@ && bash install.sh

@@ -3,8 +3,8 @@
 source ../../global.sh
 export_vars "utils.ini"
 
-apt update
+port selfupdate
 # install modules
 while read mod; do
-  apt install -y "$mod"
+  port install -y "$mod"
 done < utils.list

@@ -42,9 +42,15 @@ unlink_home () {
   done
 }
 
+unlink_ssh () {
+  for item in ssh/*; do
+    item="$(basename "${item}")"
+    unlink_item "${CONFIG_HOME}/.ssh/${item}"
+  done
+}
+
 # main
 unlink_config
-unlink_local_share
 unlink_local_bin
-unlink_local_etc
 unlink_home
+unlink_ssh

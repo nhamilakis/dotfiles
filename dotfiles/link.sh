@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
-source ../global.sh
 
+DOTFILES=$1
+CONFIG_HOME=$2
 
 link_item () {
   SOURCE=$1
@@ -48,9 +49,16 @@ link_home () {
   done
 }
 
+link_ssh () {
+  mkdir -p "${CONFIG_HOME}/.ssh"
+  for item in ssh/*; do
+    item="$(basename "${item}")"
+    link_item "${DOTFILES}/dotfiles/home/${item}" "${CONFIG_HOME}/.ssh/${item}"
+  done
+}
+
 # main
 link_config
-link_local_share
 link_local_bin
-link_local_etc
 link_home
+link_ssh

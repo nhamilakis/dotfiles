@@ -1,0 +1,1 @@
+curl wget zsh vim git htop sox

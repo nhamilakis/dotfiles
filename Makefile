@@ -21,10 +21,10 @@ local:
 
 
 dot:
-	cd dotfiles && bash link.sh
+	cd dotfiles && bash link.sh ${DOTFILE_LOCATION} ${CONFIG_HOME}
 
 undot:
-	cd dotfiles && bash unlink.sh
+	cd dotfiles && bash unlink.sh ${CONFIG_HOME}
 
 
-.PHONY: dependencies setup clean dot undot misc
+.PHONY: info dependencies local dot undot

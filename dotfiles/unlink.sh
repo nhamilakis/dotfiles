@@ -1,5 +1,11 @@
 #!/usr/bin/env bash
-source ../global.sh
+
+CONFIG_HOME=$2
+
+if [[ -z "${CONFIG_HOME}" ]]; then
+  echo "$0 needs CONFIGURATION HOME as \$1"
+  exit 1
+fi
 
 unlink_item () {
   TARGET=$1

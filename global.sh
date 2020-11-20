@@ -18,17 +18,16 @@ fetch () {
   FILENAME=$2
 
   if [[ ! -f "${TMP}/$FILENAME" ]]; then
-    echo "fetching from ${URL} -> $TMP/install_nvm.sh"
-    wget -O "${TMP}/install_nvm.sh" "${URL}"
+    wget "${URL}" -O "${TMP}/${FILENAME}"
   fi
-
-  "${TMP}/${FILENAME}"
+  echo "${TMP}/${FILENAME}"
 }
 
 export_vars "${DOTFILES}/global.ini"
 
-eval TMP="$TMP"
 eval DOTFILES="$DOTFILES"
 eval CONFIG_HOME="$CONFIG_HOME"
 
-mkdir -p "${TMP}"
+# TMP Folder
+TMP=$(mktemp -d)
+trap 'rm -rf $TMP' EXIT

@@ -1,5 +1,5 @@
 SELF_DIR := $(dir $(lastword $(MAKEFILE_LIST)))
-APPS=zsh miniconda
+APPS=zsh miniconda docker
 
 all: setup $(APPS)
 

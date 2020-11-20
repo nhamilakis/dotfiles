@@ -11,3 +11,8 @@ rar
 build-essential
 vim
 htop
+apt-transport-https
+ca-certificates
+curl
+gnupg-agent
+software-properties-common

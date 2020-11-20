@@ -2,3 +2,4 @@
 
 # source zprezto zlogin
 source "${ZDOTDIR:-$HOME}/.zprezto/runcoms/zlogin"
+ 

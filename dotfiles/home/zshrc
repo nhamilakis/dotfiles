@@ -23,3 +23,8 @@ if [[ -d "${ZSH_HOME}/modules" ]]; then
         [[ -f "${ZSH_HOME}/modules/${mod}.zsh" ]] && source "${ZSH_HOME}/modules/${mod}.zsh"
     done
 fi
+
+
+# Autojump
+unalias j
+eval "$(jump shell zsh)"

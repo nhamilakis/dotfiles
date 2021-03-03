@@ -16,7 +16,7 @@ fi
 export ZSH_HOME="$HOME/.config/zsh"
 
 # Custom modules
-declare -a SONIK_MODULES=( 'conda' 'coml' 'node' 'functions' 'icl' )
+declare -a SONIK_MODULES=( 'conda' 'coml' 'node' 'functions' 'icl' 'rec' )
 
 if [[ -d "${ZSH_HOME}/modules" ]]; then
     for mod in ${SONIK_MODULES}; do
@@ -26,5 +26,7 @@ fi
 
 
 # Autojump
-unalias j
-eval "$(jump shell zsh)"
+# [[ -z "$(which j)" ]] && unalias j
+# eval "$(jump shell zsh)"
+eval "$(jump shell --bind=z)"
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

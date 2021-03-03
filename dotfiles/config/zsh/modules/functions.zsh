@@ -5,6 +5,23 @@ function cheat () {
 	curl --silent "http://cheat.sh/$1" | less
 }
 
+# Debug server
+function serve () {
+	DIR=$1
+	PORT=$2
+	
+	# set port if empty
+	if [ -z "$PORT" ]; then
+		PORT="5050"
+	fi
+	# set current dir if empty
+	if [ -z "$DIR" ]; then
+		DIR=$(pwd)
+	fi
+
+	python -m http.server -b 127.0.0.1 -d "$DIR" "$PORT"
+}
+
 
 # Copy files to remote server using ssh
 function copy_to(){
@@ -45,4 +62,10 @@ function chouchou(){
 
 function hash() {
 	echo -n $1 | sha256sum
+}
+
+function set-wall () {
+	#todo maybe add check that file exists
+	file="$(realpath $1)"
+	gsettings set org.gnome.desktop.background picture-uri "file://$file"
 }
